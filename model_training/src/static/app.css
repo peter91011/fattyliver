@@ -1,0 +1,55 @@
+.entities {
+    line-height: 2;
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.75) url(loading.gif) no-repeat center center;
+    z-index: 10000;
+}
+
+[data-entity] {
+     padding: 0.25em 0.35em;
+     margin: 0px 0.25em;
+     line-height: 1;
+     display: inline-block;
+     border-radius: 0.25em;
+     border: 1px solid;
+}
+
+[data-entity]::after {
+    box-sizing: border-box;
+    content: attr(data-entity);
+    font-size: 0.6em;
+    line-height: 1;
+    padding: 0.35em;
+    border-radius: 0.35em;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 0px 0.1rem 0.5rem;
+}
+
+[data-entity][data-entity="AHI-Value"] {
+    background: rgba(67, 198, 252, 1.0);
+    border-color: rgb(67, 198, 252);
+}
+
+[data-entity][data-entity="AHI-Value"]::after {
+    background: rgb(255,255,255);
+}
+
+[data-entity][data-entity="BIRADS-Value"] {
+    background: rgba(166, 226, 45, 1.0);
+    border-color: rgb(166, 226, 45);
+}
+
+[data-entity][data-entity="BIRADS-Value"]::after {
+    background: rgb(255,255,255);
+}
